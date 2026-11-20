@@ -1,13 +1,6 @@
 # SOC Incident Management Engine
 
-**Language / Langue:** English | Français
-
-- [English](#english)
-- [Français](#français)
-
----
-
-# English
+[🇫🇷 Lire en français](README.fr.md)
 
 ## Project Overview
 
