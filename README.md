@@ -36,7 +36,7 @@ The project was developed as a practical cybersecurity home lab to explore secur
 | **OpenSearch** | Storage and retrieval of security alerts through Wazuh Indexer |
 | **Linux Mint** | Monitored web server environment |
 | **Nginx** | Web server and access log generation |
-| **Windows 11** | Host environment running the Python incident engine |
+| **Windows 10** | Host environment running the Python incident engine |
 | **SSH** | Secure tunnel between the Windows host and Wazuh Indexer |
 | **MITRE ATT&CK** | Classification and enrichment of detected activity |
 | **SMTP / Gmail** | Email notifications for significant incidents |
