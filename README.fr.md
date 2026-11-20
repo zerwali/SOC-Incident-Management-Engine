@@ -25,3 +25,18 @@ Ce projet a été conçu comme un laboratoire pratique de cybersécurité, perme
 ## Architecture du système
 
 <img width="3776" height="378" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/d8fc3f4a-6773-45c7-ad36-ca3370786ce5" />
+
+## Technologies utilisées
+
+| Technologie | Rôle |
+|---|---|
+| **Wazuh** | Supervision de la sécurité et génération d'alertes |
+| **Python** | Corrélation des alertes, calcul du score de risque et automatisation |
+| **OpenSearch** | Stockage et récupération des alertes via Wazuh Indexer |
+| **Linux Mint** | Environnement du serveur web surveillé |
+| **Nginx** | Serveur web et génération des journaux d'accès |
+| **Windows 10** | Environnement d'exécution du moteur Python |
+| **SSH** | Établissement d'un tunnel sécurisé entre Windows et Wazuh Indexer |
+| **MITRE ATT&CK** | Classification et enrichissement des activités détectées |
+| **SMTP / Gmail** | Envoi de notifications par e-mail |
+| **JSON** | Stockage structuré des incidents |
