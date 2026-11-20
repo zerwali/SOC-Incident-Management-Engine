@@ -40,3 +40,32 @@ Ce projet a été conçu comme un laboratoire pratique de cybersécurité, perme
 | **MITRE ATT&CK** | Classification et enrichissement des activités détectées |
 | **SMTP / Gmail** | Envoi de notifications par e-mail |
 | **JSON** | Stockage structuré des incidents |
+
+## Règles de détection personnalisées
+
+Deux règles personnalisées ont été développées dans Wazuh afin d'identifier les activités web suspectes.
+
+### Règle 100100 — Détection de l'énumération Web
+
+- **Objectif :** Détecter les tentatives potentielles d'énumération de répertoires et de fichiers web.
+- **Logique de détection :** Identifie un nombre élevé de réponses HTTP 404 provenant d'une même adresse IP source dans une fenêtre de 60 secondes, avec un nombre important d'URL distinctes demandées.
+- **Niveau de sévérité :** 10.
+- **MITRE ATT&CK :** Reconnaissance — Wordlist Scanning (T1595.003).
+
+### Règle 100101 — Détection des User-Agent suspects
+
+- **Objectif :** Identifier les requêtes générées par des outils couramment utilisés pour le scan et l'énumération web.
+- **Logique de détection :** Recherche des chaînes User-Agent suspectes associées à des outils tels que :
+  - ffuf
+  - Gobuster
+  - Feroxbuster
+  - Dirbuster
+  - Dirb
+  - Wfuzz
+  - Nikto
+- **Niveau de sévérité :** 8.
+- **MITRE ATT&CK :** Reconnaissance — Wordlist Scanning (T1595.003).
+
+Les alertes générées par ces règles sont ensuite récupérées et traitées par le moteur de gestion des incidents développé en Python.
+
+*Remarque : Le mapping MITRE ATT&CK apporte un contexte comportemental, mais ne constitue pas une preuve qu'une attaque a eu lieu.*
