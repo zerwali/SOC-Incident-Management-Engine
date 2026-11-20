@@ -32,7 +32,7 @@ The project was developed as a practical cybersecurity home lab to explore secur
 
 ## System Architecture
 
-<img width="808" height="1624" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/c6ffd606-6d20-4b67-97b8-a34c29a26b1b" />
+<img width="3776" height="378" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/e945453c-02be-410b-85ee-96a3eb7e3c8a" />
 
 ---
 
@@ -61,4 +61,5 @@ Ce projet a été conçu comme un laboratoire pratique de cybersécurité, perme
 
 ## Architecture du système
 
-<img width="808" height="1624" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/12498799-a219-4c84-833c-1af3e032bd31" />
+<img width="3776" height="378" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/d8fc3f4a-6773-45c7-ad36-ca3370786ce5" />
+
