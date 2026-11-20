@@ -27,5 +27,18 @@ The project was developed as a practical cybersecurity home lab to explore secur
 
 <img width="3776" height="378" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/e945453c-02be-410b-85ee-96a3eb7e3c8a" />
 
+## Technologies Used
 
+| Technology | Purpose |
+|---|---|
+| **Wazuh** | Security monitoring and alert generation |
+| **Python** | Incident correlation, risk scoring, and automation |
+| **OpenSearch** | Storage and retrieval of security alerts through Wazuh Indexer |
+| **Linux Mint** | Monitored web server environment |
+| **Nginx** | Web server and access log generation |
+| **Windows 11** | Host environment running the Python incident engine |
+| **SSH** | Secure tunnel between the Windows host and Wazuh Indexer |
+| **MITRE ATT&CK** | Classification and enrichment of detected activity |
+| **SMTP / Gmail** | Email notifications for significant incidents |
+| **JSON** | Structured incident storage |
 
