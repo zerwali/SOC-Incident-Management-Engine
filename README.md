@@ -1,6 +1,6 @@
-#SOC Incident Management Engine
+# SOC Incident Management Engine
 
-EN:
+## EN:
 # SOC Real-Time Incident Detection & Response Engine
 
 ## Project Overview
@@ -24,7 +24,7 @@ The project was developed as a practical cybersecurity home lab to explore secur
 - Generate structured incident records in JSON format.
 - Notify the analyst through email when significant incidents are detected.
 
-FR:
+## FR:
 # Moteur de détection et de réponse aux incidents en temps réel (SOC)
 
 ## Présentation du projet
