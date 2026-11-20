@@ -1,7 +1,13 @@
 # SOC Incident Management Engine
 
-## EN:
-# SOC Real-Time Incident Detection & Response Engine
+**Language / Langue:** English | Français
+
+- [English](#english)
+- [Français](#français)
+
+---
+
+# English
 
 ## Project Overview
 
@@ -24,8 +30,26 @@ The project was developed as a practical cybersecurity home lab to explore secur
 - Generate structured incident records in JSON format.
 - Notify the analyst through email when significant incidents are detected.
 
-## FR:
-# Moteur de détection et de réponse aux incidents en temps réel (SOC)
+## System Architecture
+
+
+flowchart TD
+    A["Linux Mint Web Server<br/>Nginx + Wazuh Agent"]
+    B["Wazuh Manager<br/>Custom Detection Rules"]
+    C["Wazuh Indexer<br/>Security Alerts"]
+    D["Windows Host<br/>Python SOC Incident Engine"]
+    E["Incident Storage<br/>incidents.json"]
+    F["Email Notification<br/>SOC Analyst"]
+
+    A -->|"Security logs"| B
+    B -->|"Generated alerts"| C
+    C -->|"SSH tunnel + HTTP requests"| D
+    D -->|"Incident records"| E
+    D -->|"Risk threshold reached"| F
+
+---
+
+# Français
 
 ## Présentation du projet
 
@@ -47,3 +71,19 @@ Ce projet a été conçu comme un laboratoire pratique de cybersécurité, perme
 - Enrichir les incidents détectés avec des informations issues du référentiel MITRE ATT&CK.
 - Générer des enregistrements d'incidents structurés au format JSON.
 - Notifier l'analyste par e-mail lors de la détection d'incidents significatifs.
+
+## Architecture du système
+
+flowchart TD
+    A["Linux Mint Web Server<br/>Nginx + Wazuh Agent"]
+    B["Wazuh Manager<br/>Custom Detection Rules"]
+    C["Wazuh Indexer<br/>Security Alerts"]
+    D["Windows Host<br/>Python SOC Incident Engine"]
+    E["Incident Storage<br/>incidents.json"]
+    F["Email Notification<br/>SOC Analyst"]
+
+    A -->|"Security logs"| B
+    B -->|"Generated alerts"| C
+    C -->|"SSH tunnel + HTTP requests"| D
+    D --> E
+    D -->|"Risk threshold reached"| F
