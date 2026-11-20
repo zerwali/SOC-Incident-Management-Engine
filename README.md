@@ -32,20 +32,7 @@ The project was developed as a practical cybersecurity home lab to explore secur
 
 ## System Architecture
 
-
-flowchart TD
-    A["Linux Mint Web Server<br/>Nginx + Wazuh Agent"]
-    B["Wazuh Manager<br/>Custom Detection Rules"]
-    C["Wazuh Indexer<br/>Security Alerts"]
-    D["Windows Host<br/>Python SOC Incident Engine"]
-    E["Incident Storage<br/>incidents.json"]
-    F["Email Notification<br/>SOC Analyst"]
-
-    A -->|"Security logs"| B
-    B -->|"Generated alerts"| C
-    C -->|"SSH tunnel + HTTP requests"| D
-    D -->|"Incident records"| E
-    D -->|"Risk threshold reached"| F
+<img width="808" height="1624" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/c6ffd606-6d20-4b67-97b8-a34c29a26b1b" />
 
 ---
 
@@ -74,16 +61,4 @@ Ce projet a été conçu comme un laboratoire pratique de cybersécurité, perme
 
 ## Architecture du système
 
-flowchart TD
-    A["Linux Mint Web Server<br/>Nginx + Wazuh Agent"]
-    B["Wazuh Manager<br/>Custom Detection Rules"]
-    C["Wazuh Indexer<br/>Security Alerts"]
-    D["Windows Host<br/>Python SOC Incident Engine"]
-    E["Incident Storage<br/>incidents.json"]
-    F["Email Notification<br/>SOC Analyst"]
-
-    A -->|"Security logs"| B
-    B -->|"Generated alerts"| C
-    C -->|"SSH tunnel + HTTP requests"| D
-    D --> E
-    D -->|"Risk threshold reached"| F
+<img width="808" height="1624" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/12498799-a219-4c84-833c-1af3e032bd31" />
