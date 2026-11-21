@@ -70,3 +70,40 @@ Two custom Wazuh rules were implemented to identify suspicious web activity.
 These rules generate security alerts that are subsequently retrieved and processed by the Python incident management engine.
 
 *Note: MITRE ATT&CK mapping provides behavioral context; it does not prove that an attack has occurred.*
+
+## Python Incident Correlation and Risk Scoring
+
+A Python-based incident management engine retrieves security alerts from the Wazuh Indexer and processes them automatically.
+
+### Alert Retrieval
+
+- Connects to the Wazuh Indexer through an SSH tunnel.
+- Queries security alerts using the OpenSearch API.
+- Periodically retrieves alerts associated with the custom detection rules.
+
+### Incident Correlation
+
+The engine groups related alerts into incidents using:
+- Source IP address.
+- Target monitored agent.
+- A five-minute correlation window.
+
+This helps transform multiple related alerts into a single incident rather than treating every alert independently.
+
+### Risk Scoring
+
+Each incident receives a risk score based on factors such as:
+- Detection rule severity and type.
+- Number of related alerts.
+- Number of distinct requested URLs.
+
+The score helps prioritize incidents according to their potential risk.
+
+### Incident Management
+
+For each incident, the engine:
+- Generates a unique incident record.
+- Enriches it with MITRE ATT&CK context.
+- Stores incident information in `incidents.json`.
+- Tracks processed alerts to avoid duplicate processing using `processed_alerts.json`.
+- Triggers an email notification when the configured risk threshold is reached.
