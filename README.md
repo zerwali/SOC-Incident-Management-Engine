@@ -107,3 +107,29 @@ For each incident, the engine:
 - Stores incident information in `incidents.json`.
 - Tracks processed alerts to avoid duplicate processing using `processed_alerts.json`.
 - Triggers an email notification when the configured risk threshold is reached.
+
+## Email Notifications and Incident Reporting
+
+The incident management engine includes an automated email notification mechanism to alert the analyst when an incident reaches the configured risk threshold.
+
+### Email Notifications
+
+- Sends notifications through Gmail using SMTP.
+- Triggers an email when an incident meets the configured risk threshold.
+- Includes relevant incident information to help the analyst assess the situation.
+
+### Incident Report Content
+
+Each notification provides a structured summary containing:
+
+- Incident ID and risk score.
+- Source IP address and targeted agent.
+- Detection rules that generated the alerts.
+- Incident timeline and alert count.
+- Requested URLs associated with the activity.
+- MITRE ATT&CK tactic and technique mapping.
+- Recommended investigation and response actions.
+
+### Incident Storage
+
+Incident records are stored locally in JSON format in `incidents.json`, providing a history of detected incidents for further analysis.
