@@ -69,3 +69,40 @@ Deux règles personnalisées ont été développées dans Wazuh afin d'identifie
 Les alertes générées par ces règles sont ensuite récupérées et traitées par le moteur de gestion des incidents développé en Python.
 
 *Remarque : Le mapping MITRE ATT&CK apporte un contexte comportemental, mais ne constitue pas une preuve qu'une attaque a eu lieu.*
+
+## Corrélation des incidents et évaluation des risques avec Python
+
+Un moteur de gestion des incidents développé en Python récupère les alertes de sécurité depuis Wazuh Indexer et les traite automatiquement.
+
+### Récupération des alertes
+
+- Établit une connexion avec Wazuh Indexer via un tunnel SSH.
+- Interroge les alertes de sécurité à l'aide de l'API OpenSearch.
+- Récupère périodiquement les alertes associées aux règles de détection personnalisées.
+
+### Corrélation des incidents
+
+Le moteur regroupe les alertes liées en fonction de :
+- L'adresse IP source.
+- L'agent surveillé ciblé.
+- Une fenêtre de corrélation de cinq minutes.
+
+Cette approche permet de regrouper plusieurs alertes liées dans un seul incident, au lieu de traiter chaque alerte individuellement.
+
+### Évaluation des risques
+
+Chaque incident reçoit un score de risque calculé en fonction de plusieurs facteurs, notamment :
+- Le niveau de sévérité et le type de règle de détection.
+- Le nombre d'alertes associées.
+- Le nombre d'URL distinctes demandées.
+
+Ce score permet de prioriser les incidents selon leur niveau de risque potentiel.
+
+### Gestion des incidents
+
+Pour chaque incident, le moteur :
+- Génère un enregistrement d'incident unique.
+- L'enrichit avec le contexte MITRE ATT&CK.
+- Enregistre les informations dans `incidents.json`.
+- Suit les alertes déjà traitées dans `processed_alerts.json` afin d'éviter les doublons.
+- Déclenche une notification par e-mail lorsque le seuil de risque configuré est atteint.
