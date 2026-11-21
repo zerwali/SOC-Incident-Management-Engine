@@ -106,3 +106,29 @@ Pour chaque incident, le moteur :
 - Enregistre les informations dans `incidents.json`.
 - Suit les alertes déjà traitées dans `processed_alerts.json` afin d'éviter les doublons.
 - Déclenche une notification par e-mail lorsque le seuil de risque configuré est atteint.
+
+## Notifications par e-mail et rapports d'incidents
+
+Le moteur de gestion des incidents intègre un mécanisme de notification automatique par e-mail afin d'alerter l'analyste lorsqu'un incident atteint le seuil de risque configuré.
+
+### Notifications par e-mail
+
+- Envoie des notifications via Gmail à l'aide du protocole SMTP.
+- Déclenche l'envoi d'un e-mail lorsqu'un incident atteint le seuil de risque configuré.
+- Inclut les informations pertinentes permettant à l'analyste d'évaluer la situation.
+
+### Contenu du rapport d'incident
+
+Chaque notification contient un résumé structuré comprenant :
+
+- L'identifiant de l'incident et son score de risque.
+- L'adresse IP source et l'agent ciblé.
+- Les règles de détection ayant généré les alertes.
+- La chronologie de l'incident et le nombre d'alertes.
+- Les URL demandées associées à l'activité détectée.
+- Le mapping des tactiques et techniques MITRE ATT&CK.
+- Des recommandations pour les actions d'investigation et de réponse.
+
+### Stockage des incidents
+
+Les enregistrements des incidents sont stockés localement au format JSON dans le fichier `incidents.json`, permettant de conserver un historique pour des analyses ultérieures.
