@@ -133,3 +133,14 @@ Each notification provides a structured summary containing:
 ### Incident Storage
 
 Incident records are stored locally in JSON format in `incidents.json`, providing a history of detected incidents for further analysis.
+
+## Project Demonstration
+1. Wazuh Security Alerts
+
+
+
+2. Email Notification
+
+
+
+3. Incident JSON Record
