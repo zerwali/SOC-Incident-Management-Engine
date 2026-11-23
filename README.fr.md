@@ -135,12 +135,12 @@ Les enregistrements des incidents sont stockés localement au format JSON dans l
 
 ##Démonstration du projet
 
-1.![Alertes de sécurité Wazuh](screenshots/wazuh-dash.jpeg)
+1.[Alertes de sécurité Wazuh](screenshots/wazuh-dash.jpeg)
 
 
 
-2.![Notification par e-mail](screenshots/email.jpeg)
+2.[Notification par e-mail](screenshots/email.jpeg)
 
 
 
-3.![Enregistrement JSON de l'incident](screenshots/engine_json.png)
+3.[Enregistrement JSON de l'incident](screenshots/engine_json.png)
