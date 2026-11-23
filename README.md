@@ -162,12 +162,12 @@ python main.py
 ```
 .
 ├── README.md
-├── main.py                  # incident engine (adapt to your files)
-├── rules/
-│   └── local_rules.xml      # custom Wazuh rules
+├── README.fr.md
+├── realtime_engine.py                  # incident engine (adapt to your files)
 ├── screenshots/
 ├── incidents.json           # generated incident records
-└── processed_alerts.json    # already-processed alerts
+├── processed_alerts.json    # already-processed alerts          
+└── engine.log     
 ```
 
 ## Limitations & Future Improvements
