@@ -143,4 +143,4 @@ Les enregistrements des incidents sont stockés localement au format JSON dans l
 
 
 
-3.[Enregistrement JSON de l'incident](screenshots/engine-json.png)
+3.[Enregistrement JSON de l'incident](screenshots/engine-json.jpeg)
