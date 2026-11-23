@@ -132,3 +132,15 @@ Chaque notification contient un résumé structuré comprenant :
 ### Stockage des incidents
 
 Les enregistrements des incidents sont stockés localement au format JSON dans le fichier `incidents.json`, permettant de conserver un historique pour des analyses ultérieures.
+
+##Démonstration du projet
+
+1. Alertes de sécurité Wazuh
+
+
+
+2. Notification par e-mail
+
+
+
+3. Enregistrement JSON de l'incident
